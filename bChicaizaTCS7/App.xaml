@@ -4,5 +4,17 @@
              x:Class="bChicaizaTCS7.App">
     <Application.Resources>
 
+        
+            <ResourceDictionary>
+                
+                <Style TargetType="StackLayout">
+                    <Setter Property="Spacing" Value="10"/>
+                    <Setter Property="Padding" Value="10"/>
+                </Style>
+
+            </ResourceDictionary>
+
+        
+        
     </Application.Resources>
 </Application>

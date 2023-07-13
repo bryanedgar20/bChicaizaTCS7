@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bChicaizaTCS7.Elemento">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Actualizar estudiante" FontSize="20" HorizontalTextAlignment="Center"/>
+
+            <Entry x:Name="txtNombre" Placeholder=" Nombre" Keyboard="Text"/>
+            <Entry x:Name="txtUsuario" Placeholder=" Usuario" Keyboard="Text"/>
+            <Entry x:Name="txtClave" Placeholder=" Clave" Keyboard="Text"/>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnGuardar" Text="Guardar" BackgroundColor="SkyBlue"  Grid.Row="1" Grid.Column="0" Clicked="btnGuardar_Clicked"/>
+                <Button x:Name="btbEliminar" Text="Eliminar" BackgroundColor="Salmon"  Grid.Row="1" Grid.Column="1"  Clicked="btbEliminar_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

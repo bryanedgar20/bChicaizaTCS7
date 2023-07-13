@@ -4,9 +4,12 @@
              x:Class="bChicaizaTCS7.Registro">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Ingrese nombre" Keyboard="Text" x:Name="txtNombre" />
+            <Entry Placeholder="Ingrese usuario" Keyboard="Text" x:Name="txtUsuario" />
+            <Entry Placeholder="Ingrese clave" Keyboard="Text" x:Name="txtClave" />
+
+            <Button x:Name="btnRegistrar" Text="Registrarse" BackgroundColor="SkyBlue" 
+                    TextColor="Black" Clicked="btnRegistrar_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

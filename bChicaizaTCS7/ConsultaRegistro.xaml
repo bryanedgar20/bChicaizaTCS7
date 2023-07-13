@@ -4,9 +4,45 @@
              x:Class="bChicaizaTCS7.ConsultaRegistro">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    
+                </Grid.ColumnDefinitions>
+                <Label x:Name="nombre" Text="Nombre" Grid.Row="0" Grid.Column="0" FontSize="14" TextColor="DarkBlue"/>
+                <Label x:Name="usuario" Text="Usuario" Grid.Row="0" Grid.Column="1" FontSize="14" TextColor="DarkBlue"/>
+            </Grid>
+            
+            <ListView x:Name="MyListView" ItemSelected="MyListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        
+                                    </Grid.ColumnDefinitions>
+                                    <Label x:Name="lblNombre" TextColor="Blue" Grid.Row="0" Grid.Column="0" Text="{Binding nombre}">
+                                    </Label>
+                                    <Label x:Name="lblUsuario" TextColor="Blue" Grid.Row="0" Grid.Column="1" Text="{Binding usuario}">
+                                    </Label>
+                            
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
